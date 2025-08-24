@@ -61,7 +61,6 @@ strong {
   background-clip: text;
 }
 
-/* FAB personalizado */
 ion-fab-button {
   --background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   --background-activated: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
@@ -74,7 +73,6 @@ ion-fab-button:hover {
   --box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
 }
 
-/* Animação para os cards */
 .contato-card {
   animation: fadeInUp 0.6s ease-out;
 }
@@ -90,13 +88,11 @@ ion-fab-button:hover {
   }
 }
 
-/* Efeito de stagger para múltiplos cards */
 .contato-card:nth-child(1) { animation-delay: 0.1s; }
 .contato-card:nth-child(2) { animation-delay: 0.2s; }
 .contato-card:nth-child(3) { animation-delay: 0.3s; }
 .contato-card:nth-child(n+4) { animation-delay: 0.4s; }
 
-/* Estado vazio */
 .lista-vazia {
   text-align: center;
   padding: 40px;
