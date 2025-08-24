@@ -40,7 +40,6 @@ export class CadastrarPage implements OnInit {
     } else {
       valor = valor.replace(/(\d{2})(\d{5})(\d{0,4})/, '($1) $2-$3');
     }
-    
     this.telefone = valor;
     event.target.value = valor;
   }
