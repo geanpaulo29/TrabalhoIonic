@@ -1,43 +1,105 @@
 .titulo {
   text-align: center;
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
+  font-size: 24px;
+  font-weight: 800;
+  color: #fff;
   width: 100%;
   position: absolute;
   left: 0;
   right: 0;
   transform: translateY(-12px);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  letter-spacing: 1px;
 }
 
 .lista-contatos {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12px;
+  padding: 16px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100%;
 }
 
 .contato-card {
   width: 90%;
-  margin: 12px 0;
-  border: 2px solid var(--ion-color-primary);
-  border-radius: 12px;
-  background: white;
-  padding: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  margin: 16px 0;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  border-left: 5px solid var(--ion-color-primary);
+}
+
+.contato-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.2);
 }
 
 ion-item {
   --background: transparent;
   --inner-padding-end: 0;
+  --min-height: 40px;
 }
 
 ion-label {
   font-size: 16px;
-  color: #444;
+  color: #2c3e50;
+  font-weight: 500;
 }
 
 strong {
   color: var(--ion-color-primary);
-  font-weight: bold;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--ion-color-primary) 0%, var(--ion-color-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* FAB personalizado */
+ion-fab-button {
+  --background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --background-activated: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
+  --box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  --transition: all 0.3s ease;
+}
+
+ion-fab-button:hover {
+  transform: scale(1.1);
+  --box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+/* Animação para os cards */
+.contato-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efeito de stagger para múltiplos cards */
+.contato-card:nth-child(1) { animation-delay: 0.1s; }
+.contato-card:nth-child(2) { animation-delay: 0.2s; }
+.contato-card:nth-child(3) { animation-delay: 0.3s; }
+.contato-card:nth-child(n+4) { animation-delay: 0.4s; }
+
+/* Estado vazio */
+.lista-vazia {
+  text-align: center;
+  padding: 40px;
+  color: #6c757d;
+  font-style: italic;
 }

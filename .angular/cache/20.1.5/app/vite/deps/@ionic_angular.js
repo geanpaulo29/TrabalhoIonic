@@ -36,19 +36,6 @@ import {
 } from "./chunk-XAXRNUFI.js";
 import "./chunk-LCMILTBF.js";
 import {
-  getPlatforms,
-  initialize,
-  isPlatform
-} from "./chunk-C2WO2YL6.js";
-import "./chunk-MNYAYXJ3.js";
-import {
-  bootstrapLazy
-} from "./chunk-4JIFBC72.js";
-import {
-  createGesture
-} from "./chunk-Z3OEOVFM.js";
-import "./chunk-QA2SYHF5.js";
-import {
   AngularDelegate,
   Config,
   ConfigToken,
@@ -72,7 +59,7 @@ import {
   provideComponentInputBinding,
   raf,
   setIonicClasses
-} from "./chunk-W7UTDJZU.js";
+} from "./chunk-XJO2U75P.js";
 import "./chunk-YLKBJ4UX.js";
 import "./chunk-DP5YLT3Y.js";
 import "./chunk-QCSDJBOS.js";
@@ -83,16 +70,29 @@ import "./chunk-EODYS5EQ.js";
 import "./chunk-QEE7QVES.js";
 import "./chunk-2H3NLAAY.js";
 import {
-  ActivatedRoute,
-  Router
-} from "./chunk-Q5NM2D75.js";
-import "./chunk-FJR7NPWP.js";
+  getPlatforms,
+  initialize,
+  isPlatform
+} from "./chunk-C2WO2YL6.js";
+import "./chunk-MNYAYXJ3.js";
+import {
+  bootstrapLazy
+} from "./chunk-4JIFBC72.js";
+import {
+  createGesture
+} from "./chunk-Z3OEOVFM.js";
+import "./chunk-QA2SYHF5.js";
 import {
   MaxValidator,
   MinValidator,
   NG_VALIDATORS,
   NG_VALUE_ACCESSOR
 } from "./chunk-6HCPH62S.js";
+import {
+  ActivatedRoute,
+  Router
+} from "./chunk-Q5NM2D75.js";
+import "./chunk-FJR7NPWP.js";
 import {
   CommonModule,
   Location,
