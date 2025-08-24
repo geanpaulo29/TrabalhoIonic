@@ -1,0 +1,54 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" text="" icon="arrow-back"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="titulo">Agenda de Contatos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list class="formulario">
+    <ion-item lines="none">
+      <ion-input placeholder="Nome" type="text" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-input 
+        placeholder="(00) 00000-0000" 
+        type="text" 
+        [(ngModel)]="telefone"
+        (ionInput)="formatarTelefone($event)"
+        (keydown)="validarTecla($event)"
+        maxlength="15">
+      </ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-select label="Gênero" placeholder="Selecione" [(ngModel)]="genero">
+        <ion-select-option value="Masculino">Masculino</ion-select-option>
+        <ion-select-option value="Feminino">Feminino</ion-select-option>
+        <ion-select-option value="Não declarar">Não declarar</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Data de Nascimento</ion-label>
+      <ion-datetime-button datetime="datetime"></ion-datetime-button>
+      <ion-modal [keepContentsMounted]="true">
+        <ng-template>
+          <ion-datetime 
+            id="datetime"
+            [(ngModel)]="dataNascimento"
+            presentation="date"
+            max="{{maxDate}}">
+          </ion-datetime>
+        </ng-template>
+      </ion-modal>
+    </ion-item>
+
+    <ion-button expand="block" class="botao-cadastrar" (click)="cadastrar()">
+      Cadastrar
+    </ion-button>
+  </ion-list>
+</ion-content>

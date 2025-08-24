@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="titulo">
+      Agenda de Contatos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list class="lista-contatos">
+    <ng-container *ngFor="let contato of contatos">
+      <ion-item-group class="contato-card">
+        <ion-item lines="none">
+          <ion-label><strong>Nome:</strong> {{contato.nome}}</ion-label>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-label><strong>Telefone:</strong> {{contato.telefone}}</ion-label>
+        </ion-item>
+        <ion-item lines="none" *ngIf="contato.genero">
+          <ion-label><strong>Gênero:</strong> {{contato.genero}}</ion-label>
+        </ion-item>
+        <ion-item lines="none" *ngIf="contato.dataNascimento">
+          <ion-label><strong>Data de Nascimento:</strong> {{formatarData(contato.dataNascimento)}}</ion-label>
+        </ion-item>
+      </ion-item-group>
+    </ng-container>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" (click)="irParaCadastrar()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
